@@ -1,0 +1,147 @@
+.header {
+    position: relative;
+}
+.header_input {
+    line-height: 72rpx;
+    margin: 22rpx 36rpx 14rpx 36rpx;
+    border: 1rpx solid #d9dde1;
+    border-radius: 36rpx;
+    padding: 0 36rpx;
+    text-align: center;
+    font-size: 26rpx;
+}
+.header_input-placeholder {
+    color: rgb(133,133,133,0.60);
+    /* font-size: 10rpx; */
+   
+}
+.header-search-icon {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-195rpx);
+    color: rgb(133,133,133,0.60);
+}
+.navigator {
+    display: flex;
+    line-height: 130rpx;
+    margin-bottom: 6rpx;
+}.navigator-item {
+    position: relative;
+    flex:1;
+    text-align: center;
+    font-size: 32rpx;
+    color: #2b332b;
+}
+.navigator-img {
+    position: relative;
+    top: 6rpx;
+    width: 36rpx;
+    height: 36rpx;
+}
+.navigator-active {
+    position: absolute;
+    width: 32rpx;
+    height: 8rpx;
+    border-radius: 4rpx;
+    background-color: #f01414;
+    left: 90rpx;
+    bottom: 20rpx;
+}
+.navigator-item-recommend {
+    background-attachment: red;
+}
+.navigator-item-path {
+    background-attachment:purple;
+}
+.navigator-item-recommend {
+    background-attachment: orange;
+}
+.navigator-item-recommend {
+    background-attachment: pink;
+}
+swiper {
+    height: 234rpx;
+}
+.swiper-item {
+/* height: 234rpx; */
+box-sizing: border-box;
+padding: 0 6rpx;
+}
+.swiper-img {
+    width: 708rpx;
+    height: 234rpx;
+    border-radius: 12rpx;
+}
+.project {
+    margin-top: 32rpx;
+    margin-left: 40rpx;
+}
+.project-title{
+    line-height: 32rpx;
+    font-size: 28rpx;
+    color: #2b333b;
+    font-weight: bold;
+}
+.project-item {
+    display: flex;
+}
+.project-img {
+    width: 208rpx;
+    height: 136rpx;
+    border-radius: 16rpx;
+}
+.project-content {
+    flex: 1;
+    margin-left: 24rpx;
+    border-bottom: 1px solid #d9dde1;
+    /* padding-bottom: 28rpx; */
+}
+.project-item-title {
+    font-size: 32rpx;
+    line-height: 40rpx;
+    color: #2b333b;
+    font-weight: bold;
+}
+.project-tags {
+    font-size: 22rpx;
+    margin-top: 12rpx;
+}
+.project-tags view {
+    margin-right: 18rpx;
+    float: left;
+}
+.project-price {
+    color: #71777d;
+}
+.project-price-active {
+    color: sienna;
+}
+.project-notice {
+    background: rgb(242,13,13,0.1);
+    border-radius: 4rpx;
+    font-size: 20rpx;
+    color: #f20d2f;
+}
+.project-user {
+line-height: 32rpx;
+color: #71777d;
+font-size: 24rpx;
+}
+.project-user-icon {
+    position: relative;
+    top: 6rpx;
+    width: 24rpx;
+    height: 30rpx;
+}
+.project-empity {
+    font-size: 24rpx;
+    text-align: center;
+}
+.activity-item {
+    display: block;
+    width: 702rpx;
+    height: 232rpx;
+    margin: 0 auto 32rpx auto;
+    border-radius: 12rpx;
+}

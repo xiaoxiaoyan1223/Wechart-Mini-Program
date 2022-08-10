@@ -1,0 +1,87 @@
+<view class="header">
+    <input 
+    class="header_input"
+    placeholder="AnguLarjs·MySQL·Java"
+    type="text"
+    bindinput="handleClickChange"/>
+    <icon type="search" class="header-search-icon" wx:if="{{showIcon}}"></icon>
+</view>
+<view class="navigator">
+    <view class="navigator-item"
+    wx:for="{{tabs}}"
+    wx:key="type"
+    data-type="{{item.type}}"
+    bindtap="changeType"
+    >
+    <image class="navigator-img"
+    src="../../resources/{{item.type}}.png" alt=""/>
+    {{item.name}}
+    <view hidden="{{type!=item.type}}" class="navigator-active navigator-active-{{item.type}}" />
+    </view>
+</view>
+<block wx:if="{{type==='recommend'}}">
+<swiper
+    previous-margin="18rpx" 
+    next-margin="18rpx"
+    circular="{{true}}"
+    >
+    <swiper-item wx:for="{{swiperList}}"
+    class="swiper-item"
+    wx:key="*this">
+    <image  class="swiper-img"
+    src="{{item.imgUrl}}" alt=""/>
+    </swiper-item>
+    <swiper-item>
+    <image class="swiper-img"
+    src="" alt=""/>
+    </swiper-item>
+    <swiper-item>
+    <image class="swiper-img"
+    src="	" alt=""/>
+    </swiper-item>
+</swiper>
+<view class="project">
+<navigator url="/pages/hot/hot">
+    <text class="project-title"
+    bindtap="handleRecommendTap">实战推荐</text>
+</navigator>
+    <view class="project-empity"
+    hidden="{{!(searchList&&searchList.length==0)}}">无搜索结果</view>
+    <view 
+    wx:for="{{searchList?searchList:courses}}"
+    wx:key="*this"
+    class="project-item">
+        <image class="project-img" src="{{item.imgUrl}}"/>
+        <view class="project-content">
+            <view class="project-item-title">{{item.title}}</view>
+            <view class="project-tags">
+            <view wx:if="{{item.promotion}}"
+            class="project-price-active">￥198</view>
+            <view wx:if="{{!item.promotion}}"
+            class="project-price">￥{{item.price}}</view>
+            <view class="project-notice">{{item.notice}}</view>
+            <view class="project-text">{{item.leve}}</view>
+            <view>
+                <view class="project-user">
+                    <image 
+                class="project-user-icon"
+                src="../../resources/user.png"
+                />
+                2892
+                </view>
+            </view>
+        </view>
+    </view>
+ </view>
+</view>
+</block>
+<block wx:if="{{type==='activity'}}">
+<view>
+   <image
+   class="activity-item"
+    wx:for="{{activity}}"
+   wx:key="imgUrl"
+   src="{{item.imgUrl}}" />
+</view>
+</block>
+
